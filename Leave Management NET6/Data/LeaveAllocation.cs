@@ -10,5 +10,7 @@ namespace Leave_Management_NET6.Data
         public int LeaveTypeId { get; set; }
         public string EmployeeId { get; set; }
 
+        public int Period { get; set; }
+
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Leave_Management_NET6.Configurations.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Leave_Management_NET6.Models;
 
 namespace Leave_Management_NET6.Data
 {

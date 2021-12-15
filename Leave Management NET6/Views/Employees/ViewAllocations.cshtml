@@ -56,14 +56,12 @@
                     <div class="col"> @allocation.LeaveType.Name</div>
                     <div class="col">
                         <button type="button" class="btn btn-primary">
-                            Allocated Days <span class="badge bg-secondary"><h6>@allocation.LeaveType.DefaultDays</h6></span>
-                            <span class="sr-only">unread messages</span>
+                            Allocated Days <span class="badge bg-secondary">@allocation.LeaveType.DefaultDays</span>
                         </button>
                     </div>
                     <div class="col">
                         <button type="button" class="btn btn-primary">
                             Remaining Days <span class="badge bg-secondary">@allocation.NumberOfDays</span>
-                            <span class="sr-only">unread messages</span>
                         </button>
                     </div>
                     <div class="col"> <a asp-action="EditAllocations" asp-route-id="@allocation.id" class="btn btn-warning"><i class="fas fa-pencil-alt"></i> Edit Allocations</a></div>

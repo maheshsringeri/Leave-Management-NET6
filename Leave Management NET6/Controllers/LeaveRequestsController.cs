@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Leave_Management_NET6.Constants;
+using Leave_Management_NET6.Contracts;
+using Leave_Management_NET6.Data;
+using Leave_Management_NET6.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Leave_Management_NET6.Data;
-using Leave_Management_NET6.Models;
-using Leave_Management_NET6.Contracts;
-using Microsoft.AspNetCore.Authorization;
-using Leave_Management_NET6.Constants;
 
 namespace Leave_Management_NET6.Controllers
 {

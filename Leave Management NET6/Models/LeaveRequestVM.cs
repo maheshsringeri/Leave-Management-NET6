@@ -9,6 +9,8 @@ namespace Leave_Management_NET6.Models
         public LeaveTypeVM LeaveType { get; set; }
 
         [Display(Name = "Date Requested")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime DateRequested { get; set; }
 
         public bool? Approved { get; set; }

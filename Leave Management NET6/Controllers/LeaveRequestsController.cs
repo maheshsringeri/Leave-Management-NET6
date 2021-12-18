@@ -1,7 +1,7 @@
-﻿using Leave_Management_NET6.Constants;
-using Leave_Management_NET6.Contracts;
+﻿using Leave_Management_NET6.Common.Constants;
+using Leave_Management_NET6.Application.Contracts;
 using Leave_Management_NET6.Data;
-using Leave_Management_NET6.Models;
+using Leave_Management_NET6.Common.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;

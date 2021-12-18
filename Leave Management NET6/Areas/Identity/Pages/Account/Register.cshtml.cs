@@ -19,7 +19,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
-using Leave_Management_NET6.Constants;
+using Leave_Management_NET6.Common.Constants;
 
 namespace Leave_Management_NET6.Areas.Identity.Pages.Account
 {

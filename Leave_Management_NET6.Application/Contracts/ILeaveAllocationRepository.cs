@@ -15,5 +15,7 @@ namespace Leave_Management_NET6.Application.Contracts
         Task<LeaveAllocationEditVM> GetEmployeeAllocation(int id);
 
         Task<bool> UpdateEmployeeAllocation(LeaveAllocationEditVM model);
+
+        Task<List<LeaveAllocationVM>> GetUserAllocatedLeaveTypes();
     }
 }

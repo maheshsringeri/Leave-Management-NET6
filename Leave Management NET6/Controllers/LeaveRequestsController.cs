@@ -14,11 +14,14 @@ namespace Leave_Management_NET6.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly ILeaveRequestRepository leaveRequestRepository;
+        private readonly ILeaveAllocationRepository leaveAllocationRepository;
 
-        public LeaveRequestsController(ApplicationDbContext context, ILeaveRequestRepository leaveRequestRepository)
+        public LeaveRequestsController(ApplicationDbContext context, ILeaveRequestRepository leaveRequestRepository,
+                    ILeaveAllocationRepository leaveAllocationRepository)
         {
             _context = context;
             this.leaveRequestRepository = leaveRequestRepository;
+            this.leaveAllocationRepository = leaveAllocationRepository;
         }
 
         // GET: LeaveRequests
@@ -79,11 +82,11 @@ namespace Leave_Management_NET6.Controllers
         }
 
         // GET: LeaveRequests/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             var model = new LeaveRequestCreateVM
             {
-                LeaveTypes = new SelectList(_context.leaveTypes, "Id", "Name")
+                LeaveTypes = new SelectList(await leaveAllocationRepository.GetUserAllocatedLeaveTypes(), "LeaveType.Id", "LeaveType.Name")
             };
 
             return View(model);

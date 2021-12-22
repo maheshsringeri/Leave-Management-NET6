@@ -47,6 +47,7 @@
         <tr>
             <th>@Html.DisplayNameFor(model => model.LeaveRequests[0].StartDate)</th>
             <th>@Html.DisplayNameFor(model => model.LeaveRequests[0].EndDate)</th>
+            <th style="text-align:center;">@Html.DisplayNameFor(model => model.LeaveRequests[0].NoOfDaysRequested)</th>
             <th>@Html.DisplayNameFor(model => model.LeaveRequests[0].LeaveType)</th>
             <th>@Html.DisplayNameFor(model => model.LeaveRequests[0].DateRequested)</th>
             <th>@Html.DisplayNameFor(model => model.LeaveRequests[0].Approved)</th>
@@ -58,6 +59,7 @@
         <tr>
             <td>@Html.DisplayFor(modelItem => item.StartDate)</td>
             <td>@Html.DisplayFor(modelItem => item.EndDate)</td>
+            <td style="text-align:center;">@Html.DisplayFor(modelItem => item.NoOfDaysRequested)</td>
             <td>@Html.DisplayFor(modelItem => item.LeaveType.Name)</td>
             <td>@Html.DisplayFor(modelItem => item.DateRequested)</td>
             <td>

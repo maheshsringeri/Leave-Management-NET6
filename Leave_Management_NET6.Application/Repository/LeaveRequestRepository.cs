@@ -116,6 +116,7 @@ namespace Leave_Management_NET6.Application.Repository
             foreach (var leaveRequest in model.LeaveRequests)
             {
                 leaveRequest.Employee = mapper.Map<EmployeeListVM>(await userManager.FindByIdAsync(leaveRequest.RequestingEmployeeId));
+                leaveRequest.NoOfDaysRequested = (int)(leaveRequest.EndDate.Value - leaveRequest.StartDate.Value).TotalDays + 1;
             }
 
             return model;
@@ -152,6 +153,11 @@ namespace Leave_Management_NET6.Application.Repository
             var leaveAllocations = (await leaveAllocationRepository.GetEmployeeAllocations(user.Id)).LeaveAllocations;
 
             var leaveRequests = await GetAllAsync(user.Id);
+
+            foreach (var leaveRequest in leaveRequests)
+            {
+                leaveRequest.NoOfDaysRequested = (int)(leaveRequest.EndDate.Value - leaveRequest.StartDate.Value).TotalDays + 1;
+            }
 
             var model = new EmployeeLeaveRequestViewVM(leaveAllocations, leaveRequests);
 

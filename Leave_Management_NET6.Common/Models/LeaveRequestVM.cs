@@ -16,6 +16,9 @@ namespace Leave_Management_NET6.Common.Models
         public bool? Approved { get; set; }
         public bool Cancelled { get; set; }
 
+        [Display(Name = "# Of Days Requested")]
+        public int? NoOfDaysRequested { get; set; }
+
         public string? RequestingEmployeeId { get; set; }
         public EmployeeListVM Employee { get; set; }
 

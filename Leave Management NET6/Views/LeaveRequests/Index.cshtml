@@ -56,6 +56,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.LeaveRequests[0].EndDate)
             </th>
+            <th style="text-align:center;">@Html.DisplayNameFor(model => model.LeaveRequests[0].NoOfDaysRequested) </th>
             <th>
                 @Html.DisplayNameFor(model => model.LeaveRequests[0].LeaveType)
             </th>
@@ -80,6 +81,9 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                <td style="text-align:center;">
+                    @Html.DisplayFor(modelItem => item.NoOfDaysRequested)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.LeaveType.Name)
